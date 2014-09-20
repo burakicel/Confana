@@ -26,6 +26,10 @@ class VideosController < ApplicationController
   def create
     @video = Video.new(video_params)
 
+    @video.name = VideoInfo.new(@video.url).title
+
+    @video.content = Video.request(@video.url)
+
     respond_to do |format|
       if @video.save
         format.html { redirect_to @video, notice: 'Video was successfully created.' }

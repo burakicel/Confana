@@ -1,44 +1,29 @@
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Confana</a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#search">Search</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Username</a></li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div>
-</div>
-
 <div class="wide">
 	<div class="star star-3"></div>
 	<div class="demo">
-  <% 5.times do %>
-    <div class="circle">
-      <div class="inner"></div>
-    </div>
-  <% end %>
-</div>
-    <div class="col-xs-12 logoText"><div class="logo"><h1><%= image_tag("search.png", :class => "searchIcon") %></h1></div>CONFANA
-</br><h4>Confana allows you to search text content of videos</h4>
-    <form class="search" action="">
-  <input type="search" placeholder="Search here..." required>
-  <button type="submit">Search</button>
-</form></br>
+		<% 5.times do %>
+		<div class="circle">
+			<div class="inner"></div>
+		</div>
+		<% end %>
+	</div>
+	<div class="col-xs-12 logoText"><div class="logo"><h1><%= image_tag("search.png", :class => "searchIcon") %></h1></div>CONFANA
+</br></br><h4>Confana allows you to search text content of videos</h4>
+
+
+<%=form_for :login, url: url_for( :controller => :interface, :action => :result, :method=>:post ), html: {class: "search"} do |f| %>
+			<%= f.text_field :username, :type=>"search",:placeholder=>"Search here..."%>
+			<div class="actions">
+			<%= button_tag(type: 'submit') do %>
+ 				Search
+			<% end %>
+			</div>
+<% end %>
+
+
 </div>
 
-    <div class="star star-1"></div>
-    <div class="star star-2"></div>
-    <div class="star star-4"></div>
+<div class="star star-1"></div>
+<div class="star star-2"></div>
+<div class="star star-4"></div>
 </div>

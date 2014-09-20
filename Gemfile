@@ -18,6 +18,14 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+gem 'viddl-rb'
+
+gem 'streamio-ffmpeg'
+
+gem 'video_info'
+
+gem 'unirest'
+
 gem 'sass', '~> 3.2.14'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

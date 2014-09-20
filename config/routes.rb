@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   resources :videos
 
+  get 'interface/result'
+
+  match '/interface/result',      to: 'interface#result',           via: 'post'
+
+
   get 'interface/index'
   root 'interface#index'
 
