@@ -1,0 +1,139 @@
+// Place all the styles related to the interface controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  padding-top: 50px;
+}
+
+.wide {
+  width:100%;
+  height:94%;
+  background-image: url(/assets/bg.png);
+  background-size:cover;
+  position:absolute; 
+  display:block;
+}
+
+.wide img {
+}
+
+.logoText {
+  color:#fff;
+  font-weight:800;
+  font-size:50pt;
+  padding:25px;
+  text-align:center;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 70px;
+  position: absolute;
+}
+
+.line {
+  padding-top:20px;
+  white-space:no-wrap;
+  overflow:hidden;
+  text-align:center;
+}
+
+.star {
+	text-align:center;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+.star-1 {
+	top:610px;
+	left:20%;
+	position: absolute;
+}
+
+.star-2 {
+	top:18px;
+	left:80%;
+	position: absolute;
+}
+
+.star-3 {
+	top:115px;
+	left:20%;
+	position: absolute;
+}
+.star-4 {
+	top:600px;
+	left:76%;
+	position: absolute;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:100);
+/* General */
+*{margin:0;padding:0;border:0;list-style:none;}
+html,body{width:100%;height:100%;overflow:hidden;}
+html{background:#353535;}
+.logo{
+  position:relative;
+  width:300px;
+  height:300px;
+  margin:100px auto;
+  margin-top: -60px;
+  margin-bottom: 0px;
+  text-align:center;
+  animation:mymove 1s infinite ease-in-out;
+  -webkit-animation:mymove 3s infinite ease-in-out; 
+  /* Safari and Chrome */
+}
+
+@keyframes mymove{
+  0%{width:300px;}
+  50%{width:400px;}
+}
+@-webkit-keyframes mymove{
+  0%{width:300px;}
+  50%{width:400px;}
+}/**/
+
+.logo:before,.logo:after{
+  position:absolute;
+  content:'';
+  width:200px;height:200px;
+  top:50px;
+  transform: rotate(45deg);
+  background:rgba(0,155,255,.05);
+  z-index:0;
+  box-shadow: 0 0 0 1px white,
+              0 0 10px 1px teal,
+        inset 0 0 10px 1px teal;
+ border-radius: 65px;
+}
+.logo:before{left:35px}
+.logo:after{right:35px}
+
+.logo h1{
+  z-index:100;
+  line-height:300px;
+  font-family:Roboto, Sans-Serif;
+  letter-spacing:5px;
+  font-size:40px;
+  color:rgba(255,255,255,1);
+  text-shadow:0 0 6px rgba(0,255,255,1);
+}
+
+body {background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/hero.jpg) no-repeat center center fixed; background-size:cover;}
+
+.search {width: 500px;height: 40px;margin: 150px auto;background: #444;background: rgba(0,0,0,.2);border-radius:  3px;border: 1px solid #fff;}
+
+.search input {width: 370px;padding: 10px 5px;float: left;color: #ccc;border: 0;background: transparent;border-radius: 3px 0 0 3px;}
+
+.search input:focus {outline: 0;background:transparent;}
+
+.search button {position: relative;float: right;border: 0;padding: 0;cursor: pointer;height: 40px;width: 120px;color: #fff;background: transparent;border-left: 1px solid #fff;border-radius: 0 3px 3px 0;}   
+
+.search button:hover {background: #fff;color:#444;}
+.search button:active {box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);}
+
+.search button:focus {outline: 0;}
+
+form.search {
+	margin-top: -1px;
+	font-size: 16px;
+}
