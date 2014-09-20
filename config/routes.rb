@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :videos
+
   get 'interface/index'
   root 'interface#index'
 
