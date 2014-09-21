@@ -3,6 +3,7 @@ class InterfaceController < ApplicationController
   end
 
   def result
-  	@input = params
+  	@input = params[:search][:query]
+  	@videos = Video.all
   end
 end

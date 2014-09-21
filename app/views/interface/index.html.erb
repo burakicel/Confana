@@ -11,8 +11,8 @@
 </br></br><h4>Confana allows you to search text content of videos</h4>
 
 
-<%=form_for :login, url: url_for( :controller => :interface, :action => :result, :method=>:post ), html: {class: "search"} do |f| %>
-			<%= f.text_field :username, :type=>"search",:placeholder=>"Search here..."%>
+<%=form_for :search, url: url_for( :controller => :interface, :action => :result, :method=>:post ), html: {class: "search"} do |f| %>
+			<%= f.text_field :query, :type=>"search",:placeholder=>"Search here..."%>
 			<div class="actions">
 			<%= button_tag(type: 'submit') do %>
  				Search

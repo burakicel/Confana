@@ -1,5 +1,28 @@
-<div class="col-xs-12 title">
-<h1>Search Results</h1>
+</br></br></br>
+<%=form_for :search, url: url_for( :controller => :interface, :action => :result, :method=>:post ), html: {class: "search"} do |f| %>
+			<%= f.text_field :query, :type=>"search",:placeholder=>"Search here..."%>
+			<div class="actions">
+			<%= button_tag(type: 'submit') do %>
+ 				Search
+			<% end %>
+			</div>
+<% end %>
+
+<div class="col-xs-12 title result">
+<h1>Search Results for <%=@input%></h1>
 <p>Your query has been compared to video content</p>
-<%= @input %>
 </div>
+
+
+<% @videos.each do |video| %>
+<% if video.content.upcase.index(@input.upcase) != nil || video.description.upcase.index(@input.upcase) != nil || video.name.upcase.index(@input.upcase) != nil%>
+<div class="col-xs-12 title list">
+<div class="banner">
+  <div class="diamond" style="background-image: url(<%=video.thumbnail%>);">
+    <div></div>
+  </div>
+  <h1 class="text"><%= video.name %></h1>
+</div>
+</div>
+<% end %>
+<% end %>

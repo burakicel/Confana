@@ -5,14 +5,15 @@
 body {
   padding-top: 50px;
   color: #fff !important;
+  overflow: scroll !important;
 }
+
 
 .wide {
   width:100%;
   height:94%;
   background-image: url(/assets/bg.png);
   background-size:cover;
-  position:absolute; 
   display:block;
 }
 
@@ -79,7 +80,7 @@ html{background:#353535;}
   margin-top: -60px;
   margin-bottom: 0px;
   text-align:center;
-  animation:mymove 1s infinite ease-in-out;
+  animation:mymove 2s infinite ease-in-out;
   -webkit-animation:mymove 3s infinite ease-in-out; 
   /* Safari and Chrome */
 }
@@ -119,7 +120,7 @@ html{background:#353535;}
   text-shadow:0 0 6px rgba(0,255,255,1);
 }
 
-body {background: url(/assets/bg.png) no-repeat center center fixed; background-size:cover;color: #FFF;}
+body {background: url(/assets/bg.png) no-repeat center center; background-size:cover;color: #FFF;}
 
 .search {width: 500px;height: 40px;margin: 150px auto;background: #444;background: rgba(0,0,0,.2);border-radius:  3px;border: 1px solid #fff;}
 
@@ -142,4 +143,73 @@ form.search {
 .title {
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
+}
+
+.title.result {
+  margin-top: -100px !important;
+}
+
+.result.list {
+  margin-top: 20px !important;
+  text-align: center;
+}
+
+.banner {
+  position: relative;
+  background-color: #1968aa;
+  width: 600px;
+  height: 200px;
+  margin-top: 10px;
+  margin-left: 27%;
+}
+
+.banner .text {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 270px;
+  font-size: 32px;
+  margin-right: 15px;
+}
+
+.diamond {
+  position: absolute;
+  background-color: rgba(0,0,0,.1);
+  background-size: 290px;
+  background-repeat: no-repeat;
+  width: 60%;
+  height: 200px;
+  -moz-transition: width 2s;
+  -o-transition: width 2s;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+.diamond:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: -100px;
+  border-right: 100px solid rgba(0,0,0,.1);
+  border-bottom: 100px solid rgba(0,0,0,0);
+}
+
+.diamond div:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  left: 100px;
+  border-right: 100px solid rgba(0,0,0,.1);
+  border-top: 100px solid rgba(0,0,0,0);
+}
+
+.banner:hover .diamond {
+  width: 25%;
+}
+
+.title.list {
+  text-align: right !important;
 }

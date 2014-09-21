@@ -30,7 +30,7 @@ class VideosController < ApplicationController
 
     @video.name = video.title
     @video.description = video.description
-    @video.thumbnail = video.thumbnail_small
+    @video.thumbnail = video.thumbnail_large
 
     @video.content = Video.request(@video.url)
 
