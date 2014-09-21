@@ -26,9 +26,14 @@ class VideosController < ApplicationController
   def create
     @video = Video.new(video_params)
 
-    @video.name = VideoInfo.new(@video.url).title
+    video = VideoInfo.new(@video.url)
+
+    @video.name = video.title
+    @video.description = video.description
+    @video.thumbnail = video.thumbnail_small
 
     @video.content = Video.request(@video.url)
+
 
     respond_to do |format|
       if @video.save
@@ -73,6 +78,6 @@ class VideosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def video_params
-      params.require(:video).permit(:url, :name, :content)
+      params.require(:video).permit(:url, :name, :content, :description, :thumbnail)
     end
 end

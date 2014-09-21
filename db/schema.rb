@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140920094245) do
+ActiveRecord::Schema.define(version: 20140921034421) do
 
   create_table "videos", force: true do |t|
     t.string   "url"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20140920094245) do
     t.string   "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "description"
+    t.string   "thumbnail"
   end
 
 end

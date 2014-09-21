@@ -22,6 +22,10 @@ gem 'viddl-rb'
 
 gem 'streamio-ffmpeg'
 
+gem 'wit_ruby'
+
+gem 'json'
+
 gem 'video_info'
 
 gem 'unirest'
